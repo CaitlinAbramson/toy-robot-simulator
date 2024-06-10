@@ -1,16 +1,18 @@
 import { useCallback, useEffect, useState } from "react";
 import { Button, ButtonGroup, Grid } from "@mui/material";
 import "./MatrixContainer.css";
-import Cell from "../Cell/Cell.tsx";
-import { RobotContext } from "../../globalStates/RobotContext.ts";
-import { DirectionProps } from "../../types/DirectionProps.ts";
-import { LocationProps } from "../../types/LocationProps.ts";
+import Cell from "../Cell/Cell";
+import { RobotContext } from "../../globalStates/RobotContext";
+import { DirectionProps } from "../../types/DirectionProps";
+import { LocationProps } from "../../types/LocationProps";
 
 const MatrixContainer = () => {
+  // initalizing robot to off the board
   const initRobot: LocationProps = {
     row: -1,
     column: -1,
   };
+
   // establishing global states
   const [robotLocation, setRobotLocation] = useState(initRobot);
   const [robotDirection, setRobotDirection] = useState(DirectionProps.NORTH);
@@ -19,6 +21,7 @@ const MatrixContainer = () => {
   const isRobotOnBoard =
     robotLocation.row !== -1 && robotLocation.column !== -1;
 
+  // rotation functions
   const handleRotateLeft = useCallback((direction: DirectionProps) => {
     switch (direction) {
       case "NORTH":

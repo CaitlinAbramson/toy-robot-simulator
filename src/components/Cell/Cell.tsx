@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Grid, Box } from "@mui/material";
-import { RobotContext } from "../../globalStates/RobotContext.ts";
-import { LocationProps } from "../../types/LocationProps.ts";
+import { RobotContext } from "../../globalStates/RobotContext";
+import { LocationProps } from "../../types/LocationProps";
 
 const Cell = ({ row, column }: LocationProps) => {
   const context = useContext(RobotContext);
