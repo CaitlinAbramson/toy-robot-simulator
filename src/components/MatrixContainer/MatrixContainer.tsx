@@ -84,7 +84,7 @@ const MatrixContainer = () => {
   const handleReport = (location: LocationProps, direction: DirectionProps) => {
     if (location.row !== -1 && location.column !== -1) {
       setMessage(
-        `Your robot is located at (${location.row}, ${location.column}) and is facing ${direction}`
+        `Your robot is located at (${location.column}, ${location.row}) and is facing ${direction}`
       );
     }
   };
