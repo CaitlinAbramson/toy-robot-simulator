@@ -35,13 +35,15 @@ const Cell = ({ row, column }: LocationProps) => {
     }
   };
 
+  // setting the background color to look like a chess board
   const getBackgroundColor = (column: number): string => {
     if ((row + column) % 2 === 0) {
-      return "black";
+      return "#222";
     }
     return "white";
   };
 
+  // did not use a seprate style sheet or styled components for simplicity here
   return (
     <Grid
       item

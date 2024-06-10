@@ -312,7 +312,7 @@ const MatrixContainer = () => {
         {/* Optional message with set height so the page doesn't jump */}
         <p style={{ height: "20px" }}>{message}</p>
         <div className="matrix--container">
-          <Grid container spacing={0} border={"1px solid black"}>
+          <Grid container spacing={0} border={"1px solid #222"}>
             {grid}
           </Grid>
         </div>
